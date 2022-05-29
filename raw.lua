@@ -6,7 +6,7 @@ local _, fe = coroutine.resume(
 )
 local realenv = fe(0).getfenv(0)
 local REALENV = {}
-for i, v in ipairs(realenv()) do
+for i, v in ipairs(realenv) do
 if typeof(v) == "function" or typeof(v) == "thread" then
 rawset(REALENV, i, debug.info(task.defer(v), 0, 'f'));
 else 
