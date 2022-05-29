@@ -12,5 +12,5 @@ rawset(REALENV, i, debug.info(task.defer(v), 0, 'f'));
 else 
 rawset(REALENV, i, v)
 end
-end
+end;
 return REALENV
